@@ -17,5 +17,11 @@ namespace ConsoleApplication3
                 return false;
             return true ;
         }
+        public static bool IsEven(int n)
+        {
+            if (n % 2 == 0)
+                return true;
+            return false;
+        }
     }
 }
