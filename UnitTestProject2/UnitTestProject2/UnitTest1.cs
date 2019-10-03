@@ -1,29 +1,100 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ConsoleApplication1;
-namespace UnitTestProject2
+using excercise4;
+
+namespace UnitTestProject1
 {
     [TestClass]
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestIsOdd()
         {
-            int result = Program.Ceil((float)2.3);
-            Assert.AreEqual(3, result);
+            bool result3 = Program.IsOdd(3);
+            Assert.AreEqual(true, result3);
 
-            int result2 = Program.Ceil(-2.3f);
-            Assert.AreEqual(-2, result);
+            bool result4 = Program.IsOdd(4);
+            Assert.AreEqual(false, result4);
+
         }
+        public void TestIsEven()
+        {
+            bool result3 = Program.IsEven(3);
+            Assert.AreEqual(false, result3);
 
-        [TestMethod]
-        public void TestFloor(){
-            int result1 = Program.Floor((float)2.3);
-            Assert.AreEqual(2, result1);
+            bool result4 = Program.IsEven(4);
+            Assert.AreEqual(true, result4);
 
-            int result2 = Program.Floor(-2.3f);
-            Assert.AreEqual(-3,result2);
         }
+        public void TestIsPrime()
+        {
+            bool result3 = Program.IsPrime(3);
+            Assert.AreEqual(true, result3);
 
+            bool result4 = Program.IsPrime(4);
+            Assert.AreEqual(false, result4);
+        }
+        public void TestSquare()
+        {
+            int result3 = Program.Square(3);
+            Assert.AreEqual(9, result3);
+
+            int result4 = Program.Square(4);
+            Assert.AreEqual(16, result4);
+        }
+        public void TestCube()
+        {
+            int result3 = Program.Cube(3);
+            Assert.AreEqual(27, result3);
+
+            int result4 = Program.Cube(4);
+            Assert.AreEqual(64, result4);
+        }
+        public void TestPow()
+        {
+            double result3 = Program.Pow(2, 3);
+            Assert.AreEqual(8, result3);
+
+            double result4 = Program.Pow(6, 2);
+            Assert.AreEqual(36, result4);
+        }
+        public void TestAbs()
+        {
+            int result3 = Program.Abs(3);
+            Assert.AreEqual(3, result3);
+
+            int result4 = Program.Abs(-9);
+            Assert.AreEqual(9, result4);
+        }
+        public void TestCeil()
+        {
+            double result3 = Program.Ceil(3.5);
+            Assert.AreEqual(4, result3);
+
+            double result4 = Program.Ceil(4);
+            Assert.AreEqual(4, result4);
+
+            double result1 = Program.Ceil(-3.2);
+            Assert.AreEqual(-3, result1);
+        }
+        public void TestFloor()
+        {
+            double result3 = Program.Floor(3.5);
+            Assert.AreEqual(3, result3);
+
+            double result4 = Program.Floor(4);
+            Assert.AreEqual(4, result4);
+
+            double result1 = Program.Floor(-3.2);
+            Assert.AreEqual(-4, result1);
+        }
+        public void TestFactorial()
+        {
+            long result3 = Program.Factorial(3);
+            Assert.AreEqual(6, result3);
+
+            long result4 = Program.Factorial(4);
+            Assert.AreEqual(24, result4);
+        }
     }
 }
